@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onclick</title>
+        <style>
+          #th1
+          {
+             padding-left:800px;
+          }  
+          #usr
+          {
+              padding-left:10px !important;
+              
+          }
+          #usr1
+          {
+              padding-left: 110px;
+          }
+          #frgt
+          {
+              padding-left: 175px;   
+          }
+          .btn
+          {
+              background-color: darkblue;
+              border-radius: 5px;
+              color:white;
+              width: 60px;
+              height: 30px;
+              font-size:12px;
+              border:1px solid #3b5998;
+          }
+          #frm
+          {
+              padding-left:750px;
+              padding-bottom: 80px;
+              
+          }
+          #fname
+          {
+              height: 25px;
+              width:220px;
+              border-radius: 1px;
+          }
+          #email
+          {
+            height: 25px;
+              width:448px;
+              border-radius: 1px;
+          }
+          a{
+              text-decoration: none;
+          }
+          #create
+          {
+            width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 1px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 18px;
+    background-image: linear-gradient(to top,green,#20BE10);
+          }
+          #username
+          {
+                height: 20px;
+                border-radius: 3px;
+          }
+          #password
+          {
+            height: 20px;
+                border-radius: 3px;
+          }
+          #fb
+          {
+              float: left;
+              padding-left:10px;
+          }
+          #inimg
+          {
+              float:left;
+              padding-left: 90px;
+              padding-top:50px;
+          }
+          #gree{
+              padding-bottom:200px;
+          }
+        </style>
+        <script type="text/javascript">
+            function validation()
+            {
+                var Firstname = document.getElementById("fname").value;
+                var Lastname = document.getElementsByName("lname").value;
+                if(Firstname == "")
+                {
+                    alert("Enter your first name")
+                    document.myForm.fname.focus();
+                    return false;
+                }
+                if(Lastname == ""){
+                    alert("Enter your Lastname");
+                    document.myForm.fname.focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+          <table width=100%>
+            <tr height=100px style="background-color: #3b5998">
+                <!-- <th style="float: left"></th> -->
+               
+                <th>
+                    
+                    <img src="facebook.svg.png" height=70px style="float: left">
+                    <div id="th1">
+                    <span id="usr" style="color:white">Username</span>
+                    <span id="usr1" style="color:white">Password</span>
+                    <br>
+                    <input type="text" name="username" id="username"> 
+                    <input type="password" name="password" id="password">
+                    <button type="submit" class="btn">Log in</button><br>
+                <a href="#" id="frgt" style="color:white">Forgot password</a>
+            </div>
+            </th>
+            </tr>
+        
+            <tr>
+            
+                <td height=80px style="background-color: rgb(202, 204, 206)">
+                        
+                        <div id="inimg">
+                            <h3>Facebook helps you connect and share with the people in your life.</h3>
+                            <img src="Facebook-Business-Page-Business-Type2.png" height=300px width=535px>
+                        </div>
+                    <form id="frm" name="myForm" onsubmit="return(validation());">
+                        <div><h1> Create an Account </h1><p><strong>It's free and always will be</strong></p></div>
+                    <input style="border-radius:5px" id="fname" name="fname" type="text" placeholder="&nbsp; &nbsp;Firstname">
+                    <input style="border-radius:5px"  id="fname" name="lname" type="text" placeholder="&nbsp; &nbsp;Lastname">
+                    <br><br>
+                    <input style="border-radius:5px"  id="email" type="text" placeholder="&nbsp; &nbsp;Email or Phone">
+                    <br><br>
+                    <input style="border-radius:5px"  id="email" type="text" placeholder="&nbsp; &nbsp;Address">
+                    <br><br>
+                    <span><strong>Birthday</strong></span><br>
+                    <select name="Day">
+                        <option selected disabled>Day</option>
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                    </select>
+                    <select name="Month">
+                            <option selected disabled>Month</option>
+                            <option value="1">January</option>
+                            <option value="1">February</option>
+                            <option value="1">March</option>
+                            <option value="1">April</option>
+                        </select>
+                        <select name="Year">
+                                <option selected disabled>Year</option>
+                                <option value="1">1995</option>
+                                <option value="1">1996</option>
+                                <option value="1">1997</option>
+                                <option value="1">1998</option>
+                            </select>
+                            <a href="#">Why should i give my birth date?</a><br><br>
+                        <input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="Female">Female
+                        <br><br>
+                        <input style="border-radius:5px"  id="email" type="password" placeholder="&nbsp; &nbsp;Enter a password">
+                    <br><br>
+                    <input style="border-radius:5px"   id="email" type="password" placeholder="&nbsp; &nbsp;Confirm password">
+                    <br><br>
+                    <span style="color:grey; font-size:12px;">By clicking create an account, you agree to our Terms and That you have read
+                    our Data Policy,<br> Including our Cookie use.</span>
+                    <br>
+                    <button id ="create" type="button" ><span id="gree">Create an Account</span></button>
+                </form>
+                </td>
+           
+            </tr>
+          </table>
+          
+    </body>
+</html>
